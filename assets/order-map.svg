@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" role="img" aria-labelledby="title desc">
+  <title id="title">LW6167E course logic map</title>
+  <desc id="desc">A diagram connecting international law theory, IR and IPE theory, institutions, and contemporary economic-order problems.</desc>
+  <rect width="960" height="620" fill="#ffffff"/>
+  <rect x="40" y="40" width="880" height="540" rx="8" fill="#f8f7f4" stroke="#d9dee5"/>
+  <text x="480" y="92" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700" fill="#182029">International Economic Order</text>
+  <text x="480" y="122" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="15" fill="#5a6675">Law, institutions, markets, and power studied together</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <rect x="80" y="170" width="230" height="120" rx="8" fill="#f5e7e3" stroke="#cfa29a"/>
+    <text x="195" y="208" text-anchor="middle" font-size="18" font-weight="700" fill="#6f2929">International Law</text>
+    <text x="195" y="238" text-anchor="middle" font-size="14" fill="#5a3232">treaties, exceptions,</text>
+    <text x="195" y="260" text-anchor="middle" font-size="14" fill="#5a3232">jurisdiction, legitimacy</text>
+
+    <rect x="365" y="170" width="230" height="120" rx="8" fill="#e8eef6" stroke="#9fb3cc"/>
+    <text x="480" y="208" text-anchor="middle" font-size="18" font-weight="700" fill="#243f63">IR and IPE</text>
+    <text x="480" y="238" text-anchor="middle" font-size="14" fill="#2d4059">power, bargaining,</text>
+    <text x="480" y="260" text-anchor="middle" font-size="14" fill="#2d4059">institutions, hierarchy</text>
+
+    <rect x="650" y="170" width="230" height="120" rx="8" fill="#e8f1ee" stroke="#9fc3bc"/>
+    <text x="765" y="208" text-anchor="middle" font-size="18" font-weight="700" fill="#25574f">Institutions</text>
+    <text x="765" y="238" text-anchor="middle" font-size="14" fill="#2f514b">WTO, IMF, World Bank,</text>
+    <text x="765" y="260" text-anchor="middle" font-size="14" fill="#2f514b">BIS, UNCITRAL, clubs</text>
+
+    <rect x="100" y="385" width="160" height="70" rx="8" fill="#ffffff" stroke="#d9dee5"/>
+    <text x="180" y="427" text-anchor="middle" font-size="15" font-weight="700" fill="#182029">Trade War</text>
+
+    <rect x="290" y="385" width="160" height="70" rx="8" fill="#ffffff" stroke="#d9dee5"/>
+    <text x="370" y="427" text-anchor="middle" font-size="15" font-weight="700" fill="#182029">Investment</text>
+
+    <rect x="480" y="385" width="160" height="70" rx="8" fill="#ffffff" stroke="#d9dee5"/>
+    <text x="560" y="416" text-anchor="middle" font-size="15" font-weight="700" fill="#182029">Sanctions and</text>
+    <text x="560" y="438" text-anchor="middle" font-size="15" font-weight="700" fill="#182029">Export Controls</text>
+
+    <rect x="670" y="385" width="160" height="70" rx="8" fill="#ffffff" stroke="#d9dee5"/>
+    <text x="750" y="416" text-anchor="middle" font-size="15" font-weight="700" fill="#182029">Reserve</text>
+    <text x="750" y="438" text-anchor="middle" font-size="15" font-weight="700" fill="#182029">Currencies</text>
+
+    <rect x="240" y="490" width="180" height="64" rx="8" fill="#ffffff" stroke="#d9dee5"/>
+    <text x="330" y="528" text-anchor="middle" font-size="15" font-weight="700" fill="#182029">Digital Trade</text>
+
+    <rect x="540" y="490" width="180" height="64" rx="8" fill="#ffffff" stroke="#d9dee5"/>
+    <text x="630" y="528" text-anchor="middle" font-size="15" font-weight="700" fill="#182029">Climate and Minerals</text>
+  </g>
+
+  <g stroke="#8792a0" stroke-width="2" fill="none">
+    <path d="M195 290 C195 330, 180 340, 180 385"/>
+    <path d="M480 290 C465 330, 405 340, 370 385"/>
+    <path d="M765 290 C710 335, 625 345, 560 385"/>
+    <path d="M480 290 C545 330, 700 340, 750 385"/>
+    <path d="M365 290 C330 350, 320 420, 330 490"/>
+    <path d="M595 290 C640 350, 650 420, 630 490"/>
+  </g>
+</svg>

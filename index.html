@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LW6167E International Economic Law and Relations</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#overview" aria-label="LW6167E overview">
+        <span class="brand-mark">LW</span>
+        <span>
+          <strong>LW6167E</strong>
+          <small>International Economic Law and Relations</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Course sections">
+        <a href="#weeks">Weeks</a>
+        <a href="#theory-map">Theory Map</a>
+        <a href="#issue-map">Issue Map</a>
+        <a href="#assessment">Assessment</a>
+        <a href="#sources">Sources</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="overview" class="overview-shell">
+        <div class="overview-copy">
+          <p class="kicker">Theory-to-problem course companion</p>
+          <h1>International Economic Law and Relations</h1>
+          <p class="lede">
+            A 12-week course on the international economic order as law,
+            institutional bargain, political economy, and geopolitical contest.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="text-command syllabus-download"
+              href="./downloads/LW6167E-International-Economic-Law-and-Relations-Final-Syllabus.docx"
+              download
+            >
+              Download finalized syllabus (Word)
+            </a>
+          </div>
+          <dl class="course-facts" aria-label="Course facts">
+            <div>
+              <dt>Code</dt>
+              <dd data-course="code">LW6167E</dd>
+            </div>
+            <div>
+              <dt>Level</dt>
+              <dd data-course="level">P6</dd>
+            </div>
+            <div>
+              <dt>Credits</dt>
+              <dd data-course="credits">3</dd>
+            </div>
+            <div>
+              <dt>Medium</dt>
+              <dd data-course="medium">English</dd>
+            </div>
+          </dl>
+        </div>
+        <figure class="order-map">
+          <img src="./assets/order-map.svg" alt="Map connecting legal regimes, theories, and international economic problems" />
+          <figcaption>Course logic: theory, doctrine, institutions, and live controversies are studied together.</figcaption>
+        </figure>
+      </section>
+
+      <section class="section-band" aria-labelledby="architecture-title">
+        <div class="section-inner two-column">
+          <div>
+            <p class="kicker">Course architecture</p>
+            <h2 id="architecture-title">From Topic Survey To Theory Engine</h2>
+          </div>
+          <div class="architecture-text" id="architecture"></div>
+        </div>
+      </section>
+
+      <section id="professor" class="section-inner professor-section" aria-labelledby="professor-title">
+        <div>
+          <p class="kicker">Professor</p>
+          <h2 id="professor-title">Professor Wang Jiangyu</h2>
+        </div>
+        <div id="professorProfile" class="professor-profile"></div>
+      </section>
+
+      <section id="weeks" class="section-inner weeks-section" aria-labelledby="weeks-title">
+        <div class="section-heading">
+          <div>
+            <p class="kicker">Weekly modules</p>
+            <h2 id="weeks-title">Twelve Problems In The International Economic Order</h2>
+          </div>
+          <div class="controls" aria-label="Filter weekly modules">
+            <label>
+              <span>Search</span>
+              <input id="searchInput" type="search" placeholder="sanctions, WTO, RMB, CBAM..." />
+            </label>
+            <label>
+              <span>Issue</span>
+              <select id="issueFilter">
+                <option value="">All issues</option>
+              </select>
+            </label>
+            <label>
+              <span>Theory</span>
+              <select id="theoryFilter">
+                <option value="">All theories</option>
+              </select>
+            </label>
+            <label>
+              <span>Institution</span>
+              <select id="institutionFilter">
+                <option value="">All institutions</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div id="weekCount" class="result-count" aria-live="polite"></div>
+        <div id="weeksGrid" class="weeks-grid"></div>
+      </section>
+
+      <section id="theory-map" class="section-band" aria-labelledby="theory-title">
+        <div class="section-inner">
+          <div class="section-heading compact">
+            <div>
+              <p class="kicker">Theory map</p>
+              <h2 id="theory-title">Theories Students Reuse Across Topics</h2>
+            </div>
+          </div>
+          <div id="theoryMap" class="map-grid"></div>
+        </div>
+      </section>
+
+      <section id="issue-map" class="section-inner" aria-labelledby="issue-title">
+        <div class="section-heading compact">
+          <div>
+            <p class="kicker">Issue map</p>
+            <h2 id="issue-title">Core Problems And Where They Appear</h2>
+          </div>
+        </div>
+        <div id="issueMap" class="issue-grid"></div>
+      </section>
+
+      <section id="assessment" class="section-band" aria-labelledby="assessment-title">
+        <div class="section-inner assessment-layout">
+          <div>
+            <p class="kicker">Assessment</p>
+            <h2 id="assessment-title">Legal-Geoeconomic Strategy Work</h2>
+            <p id="assessmentSummary"></p>
+          </div>
+          <div id="assessmentPanel" class="assessment-panel"></div>
+        </div>
+      </section>
+
+      <section id="sources" class="section-inner" aria-labelledby="sources-title">
+        <div class="section-heading compact">
+          <div>
+            <p class="kicker">Source index</p>
+            <h2 id="sources-title">Primary Materials And Institutional Sources</h2>
+          </div>
+        </div>
+        <div id="sourceList" class="source-list"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>
+        This website is created by Professor Wang Jiangyu of the City University of Hong Kong School of Law, with Codex, for his teaching and research purposes.
+      </p>
+    </footer>
+
+    <script src="./course-data.js"></script>
+    <script src="./topic-content.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
