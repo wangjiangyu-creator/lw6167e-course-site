@@ -1120,3 +1120,690 @@ window.TOPIC_CONTENT = {
     },
   },
 };
+
+const TOPIC_READING_EXPANSION = {
+  "week-01": {
+    books: [
+      {
+        label: "Matthias Herdegen, Principles of International Economic Law, 3rd ed. (Oxford University Press, 2024)",
+        url: "https://academic.oup.com/oxford-law-pro/book/57848",
+        note: "Updated field-wide reference for trade, investment, finance, development, and institutional governance.",
+      },
+      {
+        label: "Milan Babić, Adam D. Dixon and Imogen T. Liu, eds., The Oxford Handbook of Geoeconomics and Economic Statecraft (Oxford University Press, 2024), selected chapters",
+        url: "https://academic.oup.com/edited-volume/55999",
+        note: "Use the definitional and regional chapters to connect legal doctrine to economic statecraft and geopolitical strategy.",
+      },
+    ],
+    journalArticles: [
+      {
+        label: "Andrea K. Bjorklund and Gabrielle Marceau, New (Paradigms In) International Economic Law, Journal of International Economic Law (2023)",
+        url: "https://academic.oup.com/jiel/article/26/1/3/6991071",
+        note: "Recent framing essay on how international economic law has expanded beyond a narrow market-liberalization paradigm.",
+      },
+      {
+        label: "Karen J. Alter, From Colonial to Multilateral International Law: A Global Capitalism and Law Investigation, International Journal of Constitutional Law (2021)",
+        url: "https://academic.oup.com/icon/article/19/3/798/6378302",
+        note: "Connects legal form, capitalism, hierarchy, and the historical construction of multilateral legality.",
+      },
+      {
+        label: "Anthea Roberts, Risk, Reward, and Resilience Framework: Integrative Policy Making in a Complex World, Journal of International Economic Law (2023)",
+        url: "https://doi.org/10.1093/jiel/jgad009",
+        note: "A practical interdisciplinary framework for supply-chain shocks, coercion, resilience, and policy tradeoffs.",
+      },
+      {
+        label: "Shaun Breslin and Helen E. S. Nesadurai, Economic Statecraft, Geoeconomics and Regional Political Economies, The Pacific Review (2023)",
+        url: "https://doi.org/10.1080/09512748.2023.2200030",
+        note: "Useful IR/IPE bridge for distinguishing economic statecraft, geoeconomics, and regional political economy.",
+      },
+      {
+        label: "J. Benton Heath, Constructing a Global Panopticon: Towards a Jurisprudence of Weaponized Interdependence, Journal of International Economic Law (2025)",
+        url: "https://doi.org/10.1093/jiel/jgaf034",
+        note: "Shows how legal processes make economic networks legible, governable, and potentially weaponizable.",
+      },
+      {
+        label: "James Thuo Gathii and Ntina Tzouvala, Racial Capitalism and International Economic Law: Introduction, Journal of International Economic Law (2022)",
+        url: "https://doi.org/10.1093/jiel/jgac015",
+        note: "Adds a critical-theory lens on race, capitalism, and the distributional structure of the international economic order.",
+      },
+      {
+        label: "Anthea Roberts, Henrique Choer Moraes and Victor Ferguson, Toward a Geoeconomic Order in International Trade and Investment, Journal of International Economic Law (2019)",
+        url: "https://academic.oup.com/jiel/article/22/4/655/5637576",
+        note: "Foundational geoeconomics article to pair with newer economic-security scholarship.",
+      },
+    ],
+  },
+  "week-02": {
+    books: [
+      {
+        label: "Jamie Martin, The Meddlers: Sovereignty, Empire, and the Birth of Global Economic Governance (Harvard University Press, 2022)",
+        url: "https://www.degruyterbrill.com/document/doi/10.4159/9780674275768/html",
+        note: "Historical account of the pre-Bretton Woods origins of global economic governance.",
+      },
+      {
+        label: "Stefan Eich, The Currency of Politics: The Political Theory of Money from Aristotle to Keynes (Princeton University Press, 2022)",
+        url: "https://academic.oup.com/princeton-scholarship-online/book/46216",
+        note: "Gives students a political-theory route into money, sovereignty, legitimacy, and monetary hierarchy.",
+      },
+      {
+        label: "Johanna Aleria P. Lorenzo, International Financial Institutions and Sustainable Development: Lawmaking and Accountability (Cambridge University Press, 2025)",
+        url: "https://www.cambridge.org/core/books/international-financial-institutions-and-sustainable-development/B03C2D2CC06822EA1EE47839CE8DA4D7",
+        note: "Current account of IFI lawmaking, safeguards, accountability, and sustainable-development mandates.",
+      },
+    ],
+    journalArticles: [
+      {
+        label: "Tim Clark, The Teleological Turn in the Law of International Organisations, International & Comparative Law Quarterly (2021)",
+        url: "https://www.cambridge.org/core/journals/international-and-comparative-law-quarterly/article/teleological-turn-in-the-law-of-international-organisations/0783406A83B966561630882A5A070B3B",
+        note: "Useful for institutional purposes, implied powers, legitimacy, and the mandates of Bretton Woods institutions.",
+      },
+      {
+        label: "Kristalina Georgieva and Rhoda Weeks-Brown, The IMF's Evolving Role Within a Constant Mandate, Journal of International Economic Law (2023)",
+        url: "https://doi.org/10.1093/jiel/jgac069",
+        note: "Institutional self-account of how the IMF understands continuity and adaptation within its legal mandate.",
+      },
+      {
+        label: "Bin Gu and Tong Liu, Shareholding Formulas in International Financial Institutions: Learning From the Asian Infrastructure Investment Bank, Journal of International Economic Law (2022)",
+        url: "https://doi.org/10.1093/jiel/jgac035",
+        note: "Compares AIIB and Bretton Woods shareholding formulas as legal mechanisms of voice and power.",
+      },
+      {
+        label: "Kanad Bagchi, Depoliticizing Money: How the International Monetary Fund Transformed Central Banking, Journal of International Economic Law (2024)",
+        url: "https://doi.org/10.1093/jiel/jgae009",
+        note: "Connects IMF law, conditionality, surveillance, central-bank independence, and the political construction of monetary authority.",
+      },
+      {
+        label: "Daniel D. Bradlow, Rosa M. Lastra and Stephen Kim Park, Re-thinking the Sustainability of Sovereign Debt, Journal of International Economic Law (2024)",
+        url: "https://doi.org/10.1093/jiel/jgae020",
+        note: "Shows how sovereign-debt sustainability analysis can be reoriented through legal, social, environmental, and economic factors.",
+      },
+      {
+        label: "Camila Villard Duran, The (In)visible Woman at the International Monetary Fund: Engendering National Economic Rule-making, Journal of International Economic Law (2021)",
+        url: "https://doi.org/10.1093/jiel/jgab030",
+        note: "Adds a gender and institutional-authority perspective to IMF influence over national economic rulemaking.",
+      },
+    ],
+  },
+  "week-03": {
+    books: [
+      {
+        label: "Gregory Shaffer, Emerging Powers and the World Trading System: The Past and Future of International Economic Law (Cambridge University Press, 2021)",
+        url: "https://www.cambridge.org/core/books/emerging-powers-and-the-world-trading-system/260AE77E88428799AD0B400C831806A0",
+        note: "Major recent account of emerging powers, legal capacity, and change in the WTO order.",
+      },
+      {
+        label: "Alan O. Sykes, The Law and Economics of International Trade Agreements (Edward Elgar, 2023)",
+        url: "https://www.e-elgar.com/shop/isbn/9781802209730",
+        note: "Recent synthesis of trade-agreement design, economics, enforcement, and dispute settlement.",
+      },
+    ],
+    journalArticles: [
+      {
+        label: "Jorge Miranda and Manuel Sanchez Miranda, Chronicle of a Crisis Foretold: How the WTO Appellate Body Drove Itself into a Corner, Journal of International Economic Law (2023)",
+        url: "https://academic.oup.com/jiel/article/26/3/435/7221487",
+        note: "A pointed critique of Appellate Body authority, precedent, interpretation, and backlash.",
+      },
+      {
+        label: "Alan O. Sykes, The Utility of Appellate Review at the WTO and Its Optimal Structure, Journal of International Economic Law (2024)",
+        url: "https://academic.oup.com/jiel/article/27/3/424/7753537",
+        note: "Institutional-design argument for a narrower and more defensible WTO appeal mechanism.",
+      },
+      {
+        label: "Thomas Cottier, Recalibrating the WTO Dispute Settlement System: Towards New Standards of Appellate Review, Journal of International Economic Law (2021)",
+        url: "https://doi.org/10.1093/jiel/jgab022",
+        note: "Reform proposal for appellate review and adjudicative restraint in WTO dispute settlement.",
+      },
+      {
+        label: "Henry Gao, Finding a Rule-Based Solution to the Appellate Body Crisis: Looking Beyond the Multiparty Interim Appeal Arbitration Arrangement, Journal of International Economic Law (2021)",
+        url: "https://doi.org/10.1093/jiel/jgab029",
+        note: "A reform-oriented account by a leading Asia-based WTO scholar.",
+      },
+      {
+        label: "Isabelle Van Damme, 25 Years of Law and Practice at the WTO: Did the Appellate Body Dig Its Own Grave?, Journal of International Economic Law (2023)",
+        url: "https://doi.org/10.1093/jiel/jgac073",
+        note: "Short anniversary essay for debating judicial legalization and institutional legitimacy.",
+      },
+      {
+        label: "Andrew D. Mitchell, The Right to Regulate and the Interpretation of the WTO Agreement, Journal of International Economic Law (2023)",
+        url: "https://doi.org/10.1093/jiel/jgad018",
+        note: "Useful for nondiscrimination, exceptions, interpretive method, and regulatory autonomy.",
+      },
+      {
+        label: "Joost Pauwelyn, Taking Stakeholder Engagement in International Policy-Making Seriously: Is the WTO Finally Opening Up?, Journal of International Economic Law (2023)",
+        url: "https://doi.org/10.1093/jiel/jgac074",
+        note: "Links institutional legitimacy to participation, transparency, and policy-making method.",
+      },
+    ],
+  },
+  "week-04": {
+    books: [
+      {
+        label: "Henry Gao, Damian Raess and Ka Zeng, eds., China and the WTO: A Twenty-Year Assessment (Cambridge University Press, 2023)",
+        url: "https://www.cambridge.org/core/books/china-and-the-wto/62FA29DACBDB347A8394F0BFD3F7FD4D",
+        note: "Book-length treatment of China accession, WTO compliance, trade politics, and US-China conflict.",
+      },
+      {
+        label: "Trade as a Foreign Policy Issue, in China and the WTO: A Twenty-Year Assessment (Cambridge University Press, 2023)",
+        url: "https://www.cambridge.org/core/books/china-and-the-wto/trade-as-a-foreign-policy-issue/EE4886F94F49AE44FBF47C8F70EFEE02",
+        note: "Useful for treating trade war as bargaining and foreign policy, not only tariff doctrine.",
+      },
+    ],
+    journalArticles: [
+      {
+        label: "Qian Yin, Rethinking Test Data Protection in China-US Trade War: Integrating Empirical and Normative Analysis, Journal of World Trade (2023)",
+        url: "https://kluwerlawonline.com/journalarticle/Journal%2Bof%2BWorld%2BTrade/57.5/TRAD2023033",
+        note: "Legal-journal treatment of Phase One trade commitments, pharmaceutical data, and bargaining pressure.",
+      },
+      {
+        label: "Peter E. Harrell, How Trump's Trade Agreements Can Reduce US and Allied Economic Ties with China, Journal of International Economic Law (2025)",
+        url: "https://academic.oup.com/jiel/article/28/2/314/8182696",
+        note: "Links rules of origin, export controls, investment screening, and supply-chain restructuring in US-China rivalry.",
+      },
+      {
+        label: "Na Zhang and Li Liu, Pharmaceutical Patent Protection in the China-US Phase One Trade Agreement: China's Perspective, Hong Kong Law Journal (2024)",
+        url: "https://web.law.hku.hk/hklj/2024-Vol-54.php",
+        note: "Hong Kong journal perspective on Phase One implementation and the legal politics of trade-war commitments.",
+      },
+      {
+        label: "Ben Czapnik and Bryan Mercurio, The Use of Trade Coercion and China's Model of 'Passive-Aggressive Legalism', Journal of International Economic Law (2023)",
+        url: "https://doi.org/10.1093/jiel/jgad012",
+        note: "Directly addresses economic coercion, China, and legal strategy in trade conflict.",
+      },
+      {
+        label: "Anthea Roberts, Risk, Reward, and Resilience Framework: Integrative Policy Making in a Complex World, Journal of International Economic Law (2023)",
+        url: "https://doi.org/10.1093/jiel/jgad009",
+        note: "Includes China-Australia economic coercion as a case study for strategic trade-policy analysis.",
+      },
+      {
+        label: "Robert Koopman, The Likely Micro- and Macro-Economic Consequences of a Unilateral US Trade Policy, World Trade Review (2025)",
+        url: "https://doi.org/10.1017/s1474745625101067",
+        note: "Recent trade-policy analysis of unilateral tariff strategies, supply chains, uncertainty, and systemic costs.",
+      },
+      {
+        label: "Wolfgang Alschner, Recalibration, Shielding and Containment: How the World Trading System De-risks from China and the United States, World Trade Review (2025)",
+        url: "https://doi.org/10.1017/s1474745625100992",
+        note: "Frames the rest of the world as responding strategically to both China and US departures from WTO norms.",
+      },
+      {
+        label: "Marc-Antoine Couet, From Bananas to Large Civil Aircraft: An On-Going Quest for Value-Added in the Computation of Countermeasures at the WTO, Journal of International Economic Law (2023)",
+        url: "https://doi.org/10.1093/jiel/jgad006",
+        note: "Supports discussion of retaliation, countermeasures, quantification, and negotiation leverage.",
+      },
+      {
+        label: "The United States Seeks to Counter China's 'Economic Coercion' Through Enhanced Cooperation and Coordination, American Journal of International Law (2023)",
+        url: "https://www.cambridge.org/core/product/identifier/S0002930023000532/type/journal_article",
+        note: "Current-developments reading on economic coercion as a foreign-relations-law and alliance-coordination issue.",
+      },
+    ],
+  },
+  "week-05": {
+    books: [
+      {
+        label: "Geraldo Vidigal and Kathleen Claussen, eds., The Sustainability Revolution in International Trade Agreements (Oxford University Press, 2024)",
+        url: "https://academic.oup.com/book/57559",
+        note: "Recent collection on how trade agreements absorb sustainability, climate, and regulatory objectives.",
+      },
+      {
+        label: "Yenkong Ngangjoh Hodu and Collins Chikodili Ajibo, Regional Trade Agreements, Prosperity and the Global South (Cambridge University Press, 2026)",
+        url: "https://www.cambridge.org/core/books/regional-trade-agreements-prosperity-and-the-global-south/E17F4EA378272B3ED0FBB9992C829BF9",
+        note: "Current treatment of RTAs, normative beliefs, development, and the Global South.",
+      },
+    ],
+    journalArticles: [
+      {
+        label: "Uri Dadush and Enzo Dominguez Prost, Preferential Trade Agreements, Geopolitics, and the Fragmentation of World Trade, World Trade Review (2023)",
+        url: "https://www.cambridge.org/core/journals/world-trade-review/article/preferential-trade-agreements-geopolitics-and-the-fragmentation-of-world-trade/788BA2CB330A716DC130B75CDB2016E8",
+        note: "Directly supports the regionalism week through PTAs, geopolitics, and WTO fragmentation.",
+      },
+      {
+        label: "Pasha L. Hsieh, New Investment Rulemaking in Asia: Between Regionalism and Domestication, World Trade Review (2023)",
+        url: "https://www.cambridge.org/core/journals/world-trade-review/article/new-investment-rulemaking-in-asia-between-regionalism-and-domestication/6AE8E38573014B3989E1558CE92D8E23",
+        note: "Maps ASEAN, RCEP, CPTPP, ISDS, and domestic investment-law reform in Asian regional governance.",
+      },
+      {
+        label: "Christian Delev, Economic Resilience under the Indo-Pacific Economic Framework Supply Chain Agreement, World Trade Review (2025)",
+        url: "https://doi.org/10.1017/s1474745625000084",
+        note: "Assesses IPEF supply-chain resilience, managed trade, geoeconomic ambition, and WTO compatibility.",
+      },
+      {
+        label: "Meredith Kolsky Lewis, International Trade Agreements: Laboratories of Innovation or Propellers of Fragmentation?, Journal of International Economic Law (2023)",
+        url: "https://doi.org/10.1093/jiel/jgac072",
+        note: "Useful for debating whether regional and minilateral agreements innovate or erode multilateral coherence.",
+      },
+      {
+        label: "Jane Kelsey, The Illegitimacy of Joint Statement Initiatives and Their Systemic Implications for the WTO, Journal of International Economic Law (2022)",
+        url: "https://doi.org/10.1093/jiel/jgab042",
+        note: "Critical view of plurilateralism, consent, and systemic legitimacy in WTO reform.",
+      },
+      {
+        label: "Christian Delev, Straining the Spaghetti Bowl: Re-Evaluating the Regulation of Preferential Rules of Origin, Journal of International Economic Law (2022)",
+        url: "https://doi.org/10.1093/jiel/jgac001",
+        note: "Doctrinal and policy reading on rules of origin as a source of complexity in preferential trade.",
+      },
+      {
+        label: "Xianbai Ji, Securitising Regionalism: Mega-Regional Trade Blocs, Indo-Pacific Economic Framework and Supply Chain Alliances in Asia, Asia Europe Journal (2024)",
+        url: "https://doi.org/10.1007/s10308-024-00710-3",
+        note: "IR-facing article on how regional trade architectures become security and supply-chain instruments.",
+      },
+    ],
+  },
+  "week-06": {
+    books: [
+      {
+        label: "Rudolf Dolzer, Ursula Kriebaum and Christoph Schreuer, Principles of International Investment Law, 3rd ed. (Oxford University Press, 2022)",
+        url: "https://academic.oup.com/book/56239",
+        note: "Updated doctrinal reference for investment treaties, standards of protection, jurisdiction, and ISDS.",
+      },
+      {
+        label: "Surya P. Subedi KC, International Investment Law: Reconciling Policy and Principle, 5th ed. (Hart, 2024)",
+        url: "https://www.bloomsbury.com/us/international-investment-law-9781509975181/",
+        note: "Current Hart treatment of investment protection with attention to regulatory and policy controversies.",
+      },
+      {
+        label: "Axel Berger and Manjiao Chi, eds., The Making of an International Investment Facilitation Framework (Cambridge University Press, 2025)",
+        url: "https://www.cambridge.org/core/books/making-of-an-international-investment-facilitation-framework/461BBE43B68B98D0CE2A58543C86FFE2",
+        note: "Directly relevant to WTO investment facilitation, development, and multilateral rulemaking.",
+      },
+    ],
+    journalArticles: [
+      {
+        label: "Jean-Michel Marcoux, Andrea K. Bjorklund, Elizabeth A. Whitsitt and Lukas Vanhonnaeker, Discourses of ISDS Reform, Journal of International Economic Law (2024)",
+        url: "https://academic.oup.com/jiel/article/27/2/314/7678841",
+        note: "Recent map of ISDS reform narratives across UNCITRAL Working Group III and ICSID processes.",
+      },
+      {
+        label: "Mavluda Sattorova and Jean Ho, The Rise of Due Diligence in International Investment Law, Journal of International Economic Law (2026)",
+        url: "https://academic.oup.com/jiel/article/29/1/39/8537128",
+        note: "Recent treatment of investor due diligence, CSR, and competing visions of fairness in investment law.",
+      },
+      {
+        label: "Caroline Henckels, General and Security Exceptions and the Question of Compensation in International Investment Law, Journal of International Economic Law (2025)",
+        url: "https://doi.org/10.1093/jiel/jgaf005",
+        note: "Connects national-security exceptions, regulatory autonomy, and remedies in investment disputes.",
+      },
+      {
+        label: "Chen Yu, International Adjudication as Interactional Law-Making: The Incorporation of Fair and Equitable Treatment Elements in Investment Treaties, Journal of International Economic Law (2024)",
+        url: "https://doi.org/10.1093/jiel/jgae013",
+        note: "Shows how arbitral jurisprudence and treaty drafting interact in the evolution of FET.",
+      },
+      {
+        label: "Nicola Strain et al., Compliance Politics and International Investment Disputes: A New Dataset, Journal of International Economic Law (2024)",
+        url: "https://doi.org/10.1093/jiel/jgae006",
+        note: "Empirical entry point for investment-dispute compliance, politics, and institutional design.",
+      },
+      {
+        label: "Joshua Paine and Elizabeth Sheargold, A Climate Change Carve-Out for Investment Treaties, Journal of International Economic Law (2023)",
+        url: "https://doi.org/10.1093/jiel/jgad005",
+        note: "Useful for testing regulatory autonomy and climate policy against investment-protection obligations.",
+      },
+      {
+        label: "Yoram Z. Haftel, Morr Link and Tomer Broude, Last Year's Model? Investment Arbitration, Negotiation, and the Gap Between Model BITs and IIAs, Journal of International Economic Law (2023)",
+        url: "https://doi.org/10.1093/jiel/jgad017",
+        note: "Connects investment treaty drafting, negotiation practice, and institutional change.",
+      },
+      {
+        label: "William Hamilton Byrne, The Influence of Legal Scholars on the Development of International Investment Law, Journal of International Economic Law (2024)",
+        url: "https://doi.org/10.1093/jiel/jgae014",
+        note: "Sociological and empirical account of arbitrator-academics and legal scholarship in investment law.",
+      },
+    ],
+  },
+  "week-07": {
+    books: [
+      {
+        label: "Daniel McDowell, Bucking the Buck: US Financial Sanctions and the International Backlash against the Dollar (Oxford University Press, 2023)",
+        url: "https://academic.oup.com/book/45697",
+        note: "Connects dollar dominance, sanctions, anti-dollar policies, and reserve-currency politics.",
+      },
+    ],
+    journalArticles: [
+      {
+        label: "Francisco J. Quintana, Dollar Dominance, De-Dollarization, and International Law, Journal of International Economic Law (2025)",
+        url: "https://academic.oup.com/jiel/article/28/3/359/8270636",
+        note: "Treats dollar dominance and de-dollarization as legal institutions, not only macroeconomic facts.",
+      },
+      {
+        label: "Firat Cengiz, Stablecoins and Their Regulation: A Hayekian Approach, Journal of International Economic Law (2025)",
+        url: "https://academic.oup.com/jiel/article/28/2/204/8139924",
+        note: "Extends the finance week into private digital money, competition, and monetary regulatory design.",
+      },
+      {
+        label: "Yesha Yadav and Brendan Malone, Stablecoins and the US Treasury Market, Journal of International Economic Law (2025)",
+        url: "https://doi.org/10.1093/jiel/jgaf050",
+        note: "Analyzes the connection between dollar stablecoins, Treasury markets, payment systems, and reserve-currency power.",
+      },
+      {
+        label: "Kanad Bagchi, Depoliticizing Money: How the International Monetary Fund Transformed Central Banking, Journal of International Economic Law (2024)",
+        url: "https://doi.org/10.1093/jiel/jgae009",
+        note: "Shows how IMF law helped recast monetary policy as technocratic central-bank governance.",
+      },
+      {
+        label: "Karina Patrício Ferreira Lima, Sovereign Solvency as Monetary Power, Journal of International Economic Law (2022)",
+        url: "https://doi.org/10.1093/jiel/jgac024",
+        note: "Connects sovereign debt, money, and monetary power in the international financial order.",
+      },
+      {
+        label: "Daniel D. Bradlow, Rosa M. Lastra and Stephen Kim Park, Re-thinking the Sustainability of Sovereign Debt, Journal of International Economic Law (2024)",
+        url: "https://doi.org/10.1093/jiel/jgae020",
+        note: "Useful for IMF debt sustainability, climate risks, and global financial governance.",
+      },
+      {
+        label: "Scott James and Lucia Quaglia, Geoeconomics and Financial Statecraft in the European Union: The Case of Critical Market Infrastructures, Journal of International Economic Law (2025)",
+        url: "https://doi.org/10.1093/jiel/jgaf026",
+        note: "Recent finance-geoeconomics article on critical market infrastructure, autonomy, and statecraft.",
+      },
+      {
+        label: "Ryan Chahrour and Rosen Valchev, The Dollar in an Era of International Retrenchment, NBER Working Paper (2023)",
+        url: "https://www.nber.org/papers/w31405",
+        note: "Economic model for discussing dollar use, trade finance, portfolios, and possible RMB competition.",
+      },
+    ],
+  },
+  "week-08": {
+    books: [
+      {
+        label: "Nicholas Mulder, The Economic Weapon: The Rise of Sanctions as a Tool of Modern War (Yale University Press, 2022)",
+        url: "https://yalebooks.yale.edu/book/9780300262520/the-economic-weapon/",
+        note: "Historical bridge from wartime blockade to sanctions as a peacetime governance tool.",
+      },
+      {
+        label: "Surya P. Subedi, ed., Unilateral Sanctions in International Law (Hart, 2021)",
+        url: "https://www.bloomsbury.com/uk/unilateral-sanctions-in-international-law-9781509948383/",
+        note: "Collection on whether and how international law constrains unilateral sanctions.",
+      },
+    ],
+    journalArticles: [
+      {
+        label: "David Zaring, Bank to the World, Arm of the State: US Sanctions against Russia and the Federal Reserve, Journal of International Economic Law (2025)",
+        url: "https://academic.oup.com/jiel/article/28/4/689/8342090",
+        note: "Recent legal analysis of central-bank assets, financial warfare, immunity, and dollar leadership costs.",
+      },
+      {
+        label: "Elena Chachko and Abraham Newman, Building Norms of Economic Coercion, Journal of International Economic Law (2025)",
+        url: "https://academic.oup.com/jiel/article/28/3/542/8304487",
+        note: "Moves from sanctions legality to legitimacy and norm-building around economic coercion.",
+      },
+      {
+        label: "Alena F. Douhan, Obligation of Human Rights Due Diligence in the Unilateral Sanctions Environment, Chinese Journal of International Law (2025)",
+        url: "https://academic.oup.com/chinesejil/article/24/4/jmaf036/8402128",
+        note: "China-based international-law journal perspective on due diligence, over-compliance, and humanitarian effects.",
+      },
+      {
+        label: "Nathanael Tilahun and Obiora Okafor, 'Humanizing' Economic Sanctions? Lessons from International Humanitarian Law, Yale Journal of International Law (2024)",
+        url: "https://yjil.yale.edu/posts/2024-06-14-humanizing-economic-sanctions-lessons-from-international-humanitarian-law",
+        note: "Law-review perspective on proportionality, civilian harm, and humanitarian limits to sanctions.",
+      },
+      {
+        label: "J. Benton Heath, Neutrality and Governance in a Weaponized World, American Journal of International Law (2024)",
+        url: "https://doi.org/10.1017/ajil.2024.28",
+        note: "Uses SWIFT and network governance to ask what neutrality means in financial statecraft.",
+      },
+      {
+        label: "Marko Milanovic, Revisiting Coercion as an Element of Prohibited Intervention in International Law, American Journal of International Law (2023)",
+        url: "https://doi.org/10.1017/ajil.2023.40",
+        note: "Core international-law theory for evaluating coercion, intervention, and economic pressure.",
+      },
+      {
+        label: "Elena Chachko and J. Benton Heath, A Watershed Moment for Sanctions? Russia, Ukraine, and the Economic Battlefield, AJIL Unbound (2022)",
+        url: "https://doi.org/10.1017/aju.2022.21",
+        note: "Timely legal analysis of the scale, coordination, and institutional limits of Russia sanctions.",
+      },
+      {
+        label: "Miles Jackson and Federica Paddeu, 'To Deter and Counteract Economic Coercion': The Puzzle of Countermeasures in the European Union's Anti-Coercion Instrument, Journal of International Economic Law (2025)",
+        url: "https://doi.org/10.1093/jiel/jgaf047",
+        note: "Deep legal treatment of countermeasures, EU collective action, and anti-coercion authority.",
+      },
+    ],
+  },
+  "week-09": {
+    books: [
+      {
+        label: "Chris Miller, Chip War: The Fight for the World's Most Critical Technology (Scribner, 2022)",
+        url: "https://www.simonandschuster.com/books/Chip-War/Chris-Miller/9781982172008",
+        note: "Accessible account of semiconductor supply chains and geopolitical technology rivalry.",
+      },
+      {
+        label: "Olga Hrynkiv, National Security and International Economic Law: Restoring Balance (Cambridge University Press, 2026)",
+        url: "https://www.cambridge.org/core/books/national-security-and-international-economic-law/BAD0A23D36F11B05ADCA7EFBEFAF56D1",
+        note: "Timely book-length treatment of securitization and the pressure national security claims place on trade and investment law.",
+      },
+    ],
+    journalArticles: [
+      {
+        label: "Harlan Grant Cohen, Toward Best Practices for Trade-Security Measures, Journal of International Economic Law (2024)",
+        url: "https://academic.oup.com/jiel/article/27/1/93/7628742",
+        note: "Current framework for export controls, sanctions, tariffs, investment screening, subsidies, and economic security.",
+      },
+      {
+        label: "Tamar Groswald Ozery, The Laws of Financial Decoupling: Financial Lawfare in US-China Friction, Journal of International Economic Law (2025)",
+        url: "https://academic.oup.com/jiel/article/28/3/468/8275563",
+        note: "Links outbound investment, export controls, China-facing restrictions, and financial-law instruments.",
+      },
+      {
+        label: "Sarah Bauerle Danzman, A Tool Is Not a Strategy: Technology Security Amidst Contested Global Orders, Journal of International Economic Law (2025)",
+        url: "https://doi.org/10.1093/jiel/jgaf019",
+        note: "Sharp recent article on dual-use technology, security exceptions, and competing visions of global economic order.",
+      },
+      {
+        label: "Chad P. Bown, How Export Restrictions Threaten Economic Security, Journal of International Economic Law (2025)",
+        url: "https://doi.org/10.1093/jiel/jgaf021",
+        note: "Directly addresses export restrictions, critical minerals, semiconductors, medical supplies, and economic-security cooperation.",
+      },
+      {
+        label: "Nina M. Hart and Christopher A. Casey, Transatlantic Leadership in an Era of Human Rights-Based Export Controls, Journal of International Economic Law (2024)",
+        url: "https://doi.org/10.1093/jiel/jgae005",
+        note: "US-EU legal and diplomatic comparison of export controls for dual-use technologies and human-rights risks.",
+      },
+      {
+        label: "Siyu Bao, Public Policy Defences in the Name of Security: Unconventional Security Claims in WTO General Exceptions Jurisprudence, World Trade Review (2026)",
+        url: "https://doi.org/10.1017/s1474745626101463",
+        note: "Fresh WTO analysis of securitization, energy security, and general exceptions beyond classic national security.",
+      },
+      {
+        label: "J. Benton Heath, Constructing a Global Panopticon: Towards a Jurisprudence of Weaponized Interdependence, Journal of International Economic Law (2025)",
+        url: "https://doi.org/10.1093/jiel/jgaf034",
+        note: "Use for legal processes that create chokepoints in financial, data, and technology networks.",
+      },
+    ],
+  },
+  "week-10": {
+    books: [
+      {
+        label: "Henry Gao and Weihuan Zhou, Between Market Economy and State Capitalism: China's State-Owned Enterprises and the World Trading System (Cambridge University Press, 2022)",
+        url: "https://www.cambridge.org/core/books/between-market-economy-and-state-capitalism/between-market-economy-and-state-capitalism/71D42228007FF16C4624E90D0DACB4C4",
+        note: "Focused study of China SOEs, state capitalism, and WTO disciplines.",
+      },
+      {
+        label: "Petros C. Mavroidis, Industrial Policy, National Security, and the Perilous Plight of the WTO (Oxford University Press, 2025)",
+        url: "https://global.oup.com/academic/product/industrial-policy-national-security-and-the-perilous-plight-of-the-wto-9780198916307",
+        note: "Recent monograph for state intervention, national security, and WTO reform.",
+      },
+    ],
+    journalArticles: [
+      {
+        label: "Manjiao Chi, International Regulation of Industrial Subsidy, Journal of International Economic Law (2023)",
+        url: "https://academic.oup.com/jiel/article/26/1/146/6961490",
+        note: "Directly addresses industrial policy, subsidy reform, China, and the limits of SCM Agreement rules.",
+      },
+      {
+        label: "Elena Cima and Daniel C. Esty, Making International Trade Work for Sustainable Development: Toward a New WTO Framework for Subsidies, Journal of International Economic Law (2024)",
+        url: "https://academic.oup.com/jiel/article/27/1/1/7612726",
+        note: "Pairs industrial policy with sustainability, fossil-fuel subsidies, and WTO reform.",
+      },
+      {
+        label: "Petros C. Mavroidis and André Sapir, State Capitalism in the GATT/WTO Legal Order, Journal of International Economic Law (2023)",
+        url: "https://doi.org/10.1093/jiel/jgac068",
+        note: "Short, direct reading on state capitalism and the structure of WTO disciplines.",
+      },
+      {
+        label: "Robert Gulotty, WTO Subsidy Disciplines, World Trade Review (2022)",
+        url: "https://www.cambridge.org/core/journals/world-trade-review/article/wto-subsidy-disciplines/910CE714104A9F92E963BE50081D9EEB",
+        note: "Political-economy account of why subsidy disciplines are hard to sustain in a changing trade order.",
+      },
+      {
+        label: "Bernard Hoekman and Douglas Nelson, Industrial Policy and International Cooperation, World Trade Review (2025)",
+        url: "https://www.cambridge.org/core/journals/world-trade-review/article/industrial-policy-and-international-cooperation/48B261E7625507CE70904B5ADC0A3CBF",
+        note: "Recent IPE/trade article on industrial policy, spillovers, non-economic objectives, and cooperation.",
+      },
+      {
+        label: "Giulia Claudia Leonelli and Francesco Clora, Retooling the Regulation of Net-Zero Subsidies: Lessons from the US Inflation Reduction Act, Journal of International Economic Law (2024)",
+        url: "https://doi.org/10.1093/jiel/jgae025",
+        note: "Recent subsidy-law article for green industrial policy and US climate-industrial strategy.",
+      },
+      {
+        label: "Marios Tokas, The Concept of the Level Playing Field in International Economic Law, Journal of International Economic Law (2024)",
+        url: "https://doi.org/10.1093/jiel/jgae026",
+        note: "Clarifies a key legal and political concept used in subsidies, SOEs, labor, environment, and competition debates.",
+      },
+      {
+        label: "Bryan Mercurio, The Demise of Globalization and Rise of Industrial Policy: Caveat Emptor, World Trade Review (2024)",
+        url: "https://doi.org/10.1017/s1474745623000496",
+        note: "Recent account of the turn toward industrial policy, risk management, managed trade, and national security.",
+      },
+    ],
+  },
+  "week-11": {
+    books: [
+      {
+        label: "Shin-yi Peng, International Economic Law in the Era of Datafication (Cambridge University Press, 2024)",
+        url: "https://www.cambridge.org/core/books/international-economic-law-in-the-era-of-datafication/4551708D3429E47016B64D111D6372D8",
+        note: "Open-access monograph on datafication, digital trade, national security, privacy, and platforms.",
+      },
+      {
+        label: "Neha Mishra, International Trade Law and Global Data Governance: Aligning Perspectives and Practices (Hart, 2024)",
+        url: "https://www.bloomsburycollections.com/monograph?docid=b-9781509961726",
+        note: "Open-access Hart monograph on trade law, data governance, privacy, cybersecurity, and regulatory coherence.",
+      },
+      {
+        label: "Svetlana Yakovleva, Governing Cross-Border Data Flows: Reconciling EU Data Protection and International Trade Law (Oxford University Press, 2024)",
+        url: "https://academic.oup.com/book/56304",
+        note: "Useful for comparing EU data protection with trade-law commitments on data flows.",
+      },
+      {
+        label: "Anu Bradford, Digital Empires: The Global Battle to Regulate Technology (Oxford University Press, 2023)",
+        url: "https://doi.org/10.1093/oso/9780197649268.001.0001",
+        note: "Frames the US, EU, and China as competing digital regulatory models.",
+      },
+    ],
+    journalArticles: [
+      {
+        label: "Emily Jones, Beatriz Kira and Rutendo Tavengerwei, Norm Entrepreneurship in Digital Trade: The Singapore-led Wave of Digital Trade Agreements, World Trade Review (2024)",
+        url: "https://www.cambridge.org/core/journals/world-trade-review/article/norm-entrepreneurship-in-digital-trade-the-singaporeled-wave-of-digital-trade-agreements/5FD7FB9E1998F52256DF62DC2D549FB4",
+        note: "Recent empirical legal coding of digital trade agreements, including AI governance and digital identities.",
+      },
+      {
+        label: "Mira Burri and Kholofelo Kugler, Regulatory Autonomy in Digital Trade Agreements, Journal of International Economic Law (2024)",
+        url: "https://academic.oup.com/jiel/article/27/3/397/7718688",
+        note: "Supports discussion of digital sovereignty, data localization, and trade-agreement policy space.",
+      },
+      {
+        label: "Mira Burri, María Vásquez Callo-Müller and Kholofelo Kugler, The Evolution of Digital Trade Law: Insights from TAPED, World Trade Review (2024)",
+        url: "https://doi.org/10.1017/s1474745623000472",
+        note: "Dataset-driven account of digital trade provisions and digital economy agreements from 2020 to 2023.",
+      },
+      {
+        label: "Marta Soprana, Compatibility of Emerging AI Regulation with GATS and TBT: The EU Artificial Intelligence Act, Journal of International Economic Law (2024)",
+        url: "https://doi.org/10.1093/jiel/jgae040",
+        note: "Direct match for AI regulation, services, technical barriers, and WTO compatibility.",
+      },
+      {
+        label: "Jie (Jeanne) Huang, The Rise of Data Property Rights in China, Journal of International Economic Law (2024)",
+        url: "https://doi.org/10.1093/jiel/jgae032",
+        note: "Compares China and EU data regulation and asks what data property means for digital trade with China.",
+      },
+      {
+        label: "Han-Wei Liu and Weihuan Zhou, Digital Regulation in the Shadow of Digital Empires: A Quest for Cooperation?, Journal of International Economic Law (2024)",
+        url: "https://doi.org/10.1093/jiel/jgae002",
+        note: "Good bridge between digital sovereignty, regulatory competition, and prospects for cooperation.",
+      },
+      {
+        label: "María Vásquez Callo-Müller, Confronting the Perils of Datafication Through International Economic Law, Journal of International Economic Law (2024)",
+        url: "https://doi.org/10.1093/jiel/jgae041",
+        note: "Short article for asking whether international economic law can respond to datafication risks.",
+      },
+      {
+        label: "Anupam Chander and Noelle Wurst, Applying International Economic Law to Artificial Intelligence, Journal of International Economic Law (2021)",
+        url: "https://doi.org/10.1093/jiel/jgab036",
+        note: "Foundational recent article for situating AI governance in trade and international economic law.",
+      },
+    ],
+  },
+  "week-12": {
+    books: [
+      {
+        label: "Damilola S. Olawuyi, ed., Net Zero and Natural Resources Law: Sovereignty, Security, and Solidarity in the Clean Energy Transition (Oxford University Press, 2024)",
+        url: "https://academic.oup.com/book/57560",
+        note: "Recent collection for climate transition, natural resources, sovereignty, security, and solidarity.",
+      },
+      {
+        label: "Barry Barton, Critical Minerals Strategies, Net Zero, and Natural Resources Law, in Net Zero and Natural Resources Law (Oxford University Press, 2024)",
+        url: "https://academic.oup.com/book/57560/chapter/469038404",
+        note: "Direct match for the critical-minerals component of the capstone week.",
+      },
+    ],
+    journalArticles: [
+      {
+        label: "Victor Crochet and Weihuan Zhou, Critical Insecurities? The European Union's Strategy for a Stable Supply of Minerals, Journal of International Economic Law (2024)",
+        url: "https://academic.oup.com/jiel/article/27/1/147/7603112",
+        note: "Focused article on critical minerals, EU strategy, trade tools, investment rules, and policy space.",
+      },
+      {
+        label: "Laurie Durel, Border Carbon Adjustment Compliance and the WTO: The Interactional Evolution of Law, Journal of International Economic Law (2024)",
+        url: "https://academic.oup.com/jiel/article/27/1/18/7613372",
+        note: "Recent WTO-facing article for CBAM legality, compliance, and legal evolution.",
+      },
+      {
+        label: "Margaret A. Young and Georgina Clough, Net-Zero Emissions and Free Trade Agreements, International & Comparative Law Quarterly (2023)",
+        url: "https://doi.org/10.1017/s002058932300012x",
+        note: "Good capstone article on FTAs as climate-governance vehicles.",
+      },
+      {
+        label: "Giulia Claudia Leonelli, Critical Raw Materials, the Net-Zero Transition and the 'Securitization' of the Trade and Climate Change Mitigation Nexus, World Trade Review (2025)",
+        url: "https://doi.org/10.1017/s1474745624000430",
+        note: "Connects critical raw materials, friendshoring, national security, industrial policy, and decarbonization.",
+      },
+      {
+        label: "Giulia Claudia Leonelli, Anti-deforestation npr-PPMs and Carbon Border Measures: Thinking About the Chapeau of Article XX GATT in Times of Climate Crisis, Journal of International Economic Law (2023)",
+        url: "https://doi.org/10.1093/jiel/jgad016",
+        note: "Detailed WTO Article XX analysis for unilateral climate and anti-deforestation measures.",
+      },
+      {
+        label: "Roland Ismer, Harro van Asselt, Jennifer Haverkamp, Michael Mehling, Karsten Neuhoff and Alice Pirlot, Supporting the Transition to Climate-Neutral Production, Journal of International Economic Law (2023)",
+        url: "https://doi.org/10.1093/jiel/jgac058",
+        note: "Analyzes climate-neutral production support under the WTO SCM Agreement.",
+      },
+      {
+        label: "Joel Trachtman, Jan Yves Remy and Daniel C. Esty, Remaking Trade for a Sustainable Future, Journal of International Economic Law (2024)",
+        url: "https://doi.org/10.1093/jiel/jgae046",
+        note: "Introduces the sustainable-trade reform agenda behind the Villars Framework work.",
+      },
+      {
+        label: "James Harrison and Sophia Paulini, Reinventing Trade, Environment and Development Interlinkages: Lessons from the EU-Mercosur Association Agreement, Journal of International Economic Law (2024)",
+        url: "https://doi.org/10.1093/jiel/jgae043",
+        note: "Useful for North-South bargaining, development concerns, and trade-environment legitimacy.",
+      },
+      {
+        label: "Shivani Sagar Kalra, International Trade Law: A Driver of Climate Action or a Roadblock?, International Journal of Legal Information (2024)",
+        url: "https://www.cambridge.org/core/journals/international-journal-of-legal-information/article/abs/international-trade-law-a-driver-of-climate-action-or-a-roadblock/08454F4EFE9ECA16CB72A7CFED066BBE",
+        note: "Accessible recent article for asking whether WTO mechanisms can accelerate climate action.",
+      },
+    ],
+  },
+};
+
+Object.entries(TOPIC_READING_EXPANSION).forEach(([weekId, categories]) => {
+  const topic = window.TOPIC_CONTENT.topics[weekId];
+  if (!topic) return;
+
+  Object.entries(categories).forEach(([categoryKey, items]) => {
+    const existing = topic.recommendedReadings[categoryKey] || [];
+    const labels = new Set(existing.map((item) => (typeof item === "string" ? item : item.label)));
+    items.forEach((item) => {
+      if (!labels.has(item.label)) {
+        existing.push(item);
+        labels.add(item.label);
+      }
+    });
+    topic.recommendedReadings[categoryKey] = existing;
+  });
+});
