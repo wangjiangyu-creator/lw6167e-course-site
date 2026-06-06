@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Academic Updates | LW6167E</title>
+    <title>Academic | LW6167E</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="academic-page">
@@ -16,17 +16,19 @@
         </span>
       </a>
       <nav class="nav" aria-label="Course sections">
-        <a href="./index.html#weeks">Weeks</a>
-        <a href="./index.html#theory-map">Theory Map</a>
-        <a href="./index.html#sources">Sources</a>
-        <a href="./academic-updates.html" aria-current="page">Academic Updates</a>
+        <a href="./topics.html">Topics</a>
+        <a href="./rules.html">Rules</a>
+        <a href="./reports.html">Reports</a>
+        <a href="./academic-updates.html" aria-current="page">Academic</a>
+        <a href="./media.html">Media</a>
+        <a href="./sources.html">Sources</a>
       </nav>
     </header>
 
     <main class="academic-layout">
       <section class="academic-hero">
-        <p class="kicker">Academic Updates</p>
-        <h1>Recent Books And Journal Articles</h1>
+        <p class="kicker">Academic</p>
+        <h1>Books, Chapters, And Journal/Law Review Articles</h1>
         <p id="academicScope" class="lede"></p>
         <p id="academicCopyright" class="academic-copyright"></p>
         <div class="academic-status">
@@ -39,7 +41,7 @@
         <div class="section-heading compact">
           <div>
             <p class="kicker">Secondary database</p>
-            <h2 id="academic-controls-title">Filter Scholarship By Topic</h2>
+            <h2 id="academic-controls-title">Filter Academic Works By Topic</h2>
           </div>
         </div>
         <div class="controls academic-controls" aria-label="Filter academic updates">
@@ -70,6 +72,20 @@
       </section>
 
       <div id="academicResults" class="academic-results"></div>
+
+      <section id="academic-documents" class="topic-panel academic-documents-panel" aria-labelledby="academic-documents-title">
+        <div class="section-heading compact">
+          <div>
+            <p class="kicker">Uploaded documents</p>
+            <h2 id="academic-documents-title">Academic Document Library</h2>
+            <p>
+              Downloadable books, chapters, journal articles, and law-review materials copied into this site from the
+              course academic-articles folder.
+            </p>
+          </div>
+        </div>
+        <div id="academicDocumentList" class="source-list" aria-label="Uploaded academic documents"></div>
+      </section>
     </main>
 
     <footer class="footer">
@@ -84,6 +100,7 @@
     <script src="./academic-updates-records-2.js"></script>
     <script src="./academic-updates-records-3.js"></script>
     <script src="./academic-updates-data.js"></script>
-    <script src="./academic-updates.js"></script>
+    <script src="./academic-documents.js?v=20260606-academic-docs"></script>
+    <script src="./academic-updates.js?v=20260606-academic-docs"></script>
   </body>
 </html>

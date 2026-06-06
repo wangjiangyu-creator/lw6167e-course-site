@@ -77,13 +77,13 @@
 
     const readings = $("#readings");
     [
-      "classicWorks",
+      "primaryMaterials",
+      "institutionalReports",
       "books",
       "journalArticles",
-      "institutionalReports",
+      "classicWorks",
       "mediaReports",
       "videos",
-      "primaryMaterials",
     ]
       .filter((key) => topic.recommendedReadings[key])
       .forEach((key) => {
@@ -111,7 +111,7 @@
       link.href = `./${content.topics[targetWeek.id].slug}.html`;
       link.textContent = `${label}: Week ${targetWeek.week}`;
     } else {
-      link.href = "../index.html#weeks";
+      link.href = "../topics.html";
       link.textContent = label;
     }
     return link;

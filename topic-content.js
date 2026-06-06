@@ -298,12 +298,12 @@ window.TOPIC_CONTENT = {
   },
   categories: {
     classicWorks: "Classic works for theoretical foundations",
-    books: "Books and book chapters",
-    journalArticles: "Journal articles and scholarly chapters",
-    institutionalReports: "Reports by international organizations, governments, and think tanks",
-    mediaReports: "Media, policy analysis, and current affairs",
+    books: "Academic books and book chapters",
+    journalArticles: "Academic journal and law review articles",
+    institutionalReports: "Reports: policy papers and reports by organizations and think tanks",
+    mediaReports: "Media and current affairs",
     videos: "Videos, podcasts, and recorded briefings",
-    primaryMaterials: "Primary legal and institutional materials",
+    primaryMaterials: "Rules: international agreements, treaties, and legislation",
   },
   topics: {
     "week-01": {

@@ -1,6 +1,11 @@
 (function () {
   const data = window.COURSE_DATA;
   const topicContent = window.TOPIC_CONTENT;
+  const legislationDocuments = window.LEGISLATION_DOCUMENTS || [];
+  const wtoDocuments = window.WTO_DOCUMENTS || [];
+  const wtoChinaReformDocuments = window.WTO_CHINA_REFORM_DOCUMENTS || [];
+  const policyPaperDocuments = window.POLICY_PAPER_DOCUMENTS || [];
+  const mediaDocuments = window.MEDIA_DOCUMENTS || [];
 
   const $ = (selector) => document.querySelector(selector);
   const el = (tag, className, text) => {
@@ -12,16 +17,29 @@
 
   const normalize = (value) => String(value || "").toLowerCase();
   const unique = (items) => Array.from(new Set(items)).sort((a, b) => a.localeCompare(b));
+  const formatBytes = (bytes) => {
+    const value = Number(bytes) || 0;
+    if (value >= 1_000_000) return `${(value / 1_000_000).toFixed(1)} MB`;
+    return `${Math.max(1, Math.round(value / 1_000))} KB`;
+  };
 
   function initCourseFacts() {
-    $('[data-course="code"]').textContent = data.course.code;
-    $('[data-course="level"]').textContent = data.course.level;
-    $('[data-course="credits"]').textContent = data.course.creditUnits;
-    $('[data-course="medium"]').textContent = data.course.medium;
+    const facts = {
+      code: $('[data-course="code"]'),
+      level: $('[data-course="level"]'),
+      credits: $('[data-course="credits"]'),
+      medium: $('[data-course="medium"]'),
+    };
+    if (!facts.code || !facts.level || !facts.credits || !facts.medium) return;
+    facts.code.textContent = data.course.code;
+    facts.level.textContent = data.course.level;
+    facts.credits.textContent = data.course.creditUnits;
+    facts.medium.textContent = data.course.medium;
   }
 
   function renderArchitecture() {
     const container = $("#architecture");
+    if (!container) return;
     [data.architecture.premise, data.architecture.method, data.architecture.throughLine].forEach((text) => {
       container.appendChild(el("p", "", text));
     });
@@ -30,6 +48,7 @@
   function renderProfessorProfile() {
     const professor = topicContent.professor;
     const container = $("#professorProfile");
+    if (!container) return;
     const lead = el("p", "professor-lead", professor.framing);
     container.appendChild(lead);
 
@@ -62,6 +81,7 @@
   }
 
   function populateFilters() {
+    if (!$("#issueFilter") || !$("#theoryFilter") || !$("#institutionFilter")) return;
     addOptions("#issueFilter", unique(data.weeks.flatMap((week) => week.issues)));
     addOptions(
       "#theoryFilter",
@@ -72,6 +92,7 @@
 
   function addOptions(selector, values) {
     const select = $(selector);
+    if (!select) return;
     values.forEach((value) => {
       const option = document.createElement("option");
       option.value = value;
@@ -152,10 +173,10 @@
   }
 
   function filterWeeks() {
-    const query = normalize($("#searchInput").value);
-    const issue = $("#issueFilter").value;
-    const theory = $("#theoryFilter").value;
-    const institution = $("#institutionFilter").value;
+    const query = normalize($("#searchInput")?.value);
+    const issue = $("#issueFilter")?.value || "";
+    const theory = $("#theoryFilter")?.value || "";
+    const institution = $("#institutionFilter")?.value || "";
 
     return data.weeks.filter((week) => {
       const searchable = normalize(JSON.stringify(week));
@@ -170,15 +191,18 @@
   }
 
   function renderWeeks() {
-    const weeks = filterWeeks();
     const grid = $("#weeksGrid");
+    if (!grid) return;
+    const weeks = filterWeeks();
     grid.replaceChildren();
     weeks.forEach((week) => grid.appendChild(renderWeekCard(week)));
-    $("#weekCount").textContent = `${weeks.length} of ${data.weeks.length} modules shown`;
+    const count = $("#weekCount");
+    if (count) count.textContent = `${weeks.length} of ${data.weeks.length} topics shown`;
   }
 
   function renderTheoryMap() {
     const map = $("#theoryMap");
+    if (!map) return;
     const theoryWeeks = new Map();
     data.weeks.forEach((week) => {
       week.theory.il.concat(week.theory.ir).forEach((theory) => {
@@ -199,6 +223,7 @@
 
   function renderIssueMap() {
     const map = $("#issueMap");
+    if (!map) return;
     data.tags.issues.forEach((issue) => {
       const weeks = data.weeks.filter((week) => week.issues.includes(issue));
       const item = el("div", "issue-item");
@@ -208,11 +233,107 @@
     });
   }
 
+  function collectRecommendedItems(categoryKeys, limit) {
+    const keys = Array.isArray(categoryKeys) ? categoryKeys : [categoryKeys];
+    const items = [];
+    data.weeks.forEach((week) => {
+      const topic = topicContent.topics[week.id];
+      if (!topic) return;
+      keys.forEach((key) => {
+        const readings = topic.recommendedReadings[key] || [];
+        readings.forEach((reading) => {
+          items.push({
+            week,
+            reading,
+            category: topicContent.categories[key],
+          });
+        });
+      });
+    });
+    return items.slice(0, limit);
+  }
+
+  function renderRecommendedShelf(selector, categoryKeys, limit) {
+    const list = $(selector);
+    if (!list) return;
+    collectRecommendedItems(categoryKeys, limit).forEach(({ week, reading, category }) => {
+      const item = el("div", "source-item");
+      const linkBox = el("div", "");
+      if (reading.url) {
+        const link = document.createElement("a");
+        link.href = reading.url;
+        link.target = "_blank";
+        link.rel = "noreferrer";
+        link.textContent = reading.label;
+        linkBox.appendChild(link);
+      } else {
+        linkBox.appendChild(el("strong", "", reading.label));
+      }
+      item.appendChild(linkBox);
+      item.appendChild(el("p", "", reading.note || category));
+      item.appendChild(el("p", "", `Topic ${week.week}`));
+      list.appendChild(item);
+    });
+  }
+
+  function renderFeaturedResources() {
+    renderRecommendedShelf("#rulesList", "primaryMaterials", 12);
+    renderRecommendedShelf("#reportsList", "institutionalReports", 12);
+    renderRecommendedShelf("#mediaList", "mediaReports", 12);
+  }
+
+  function renderUploadedDocuments(selector, documents) {
+    const list = $(selector);
+    if (!list) return;
+    documents.forEach((documentRecord) => {
+      const item = el("div", "source-item");
+      const linkBox = el("div", "");
+      const link = document.createElement("a");
+      link.href = documentRecord.url;
+      link.target = "_blank";
+      link.rel = "noreferrer";
+      link.textContent = documentRecord.title;
+      linkBox.appendChild(link);
+      item.appendChild(linkBox);
+      item.appendChild(
+        el(
+          "p",
+          "",
+          `${documentRecord.source}; ${documentRecord.year}; ${documentRecord.fileType || "PDF"} (${formatBytes(documentRecord.bytes)})`
+        )
+      );
+      item.appendChild(el("p", "", "Uploaded document"));
+      list.appendChild(item);
+    });
+  }
+
+  function renderLegislationDocuments() {
+    renderUploadedDocuments("#legislationDocumentList", legislationDocuments);
+  }
+
+  function renderWtoDocuments() {
+    renderUploadedDocuments("#wtoDocumentList", wtoDocuments);
+  }
+
+  function renderWtoChinaReformDocuments() {
+    renderUploadedDocuments("#wtoChinaReformDocumentList", wtoChinaReformDocuments);
+  }
+
+  function renderPolicyPaperDocuments() {
+    renderUploadedDocuments("#policyPaperDocumentList", policyPaperDocuments);
+  }
+
+  function renderMediaDocuments() {
+    renderUploadedDocuments("#mediaDocumentList", mediaDocuments);
+  }
+
   function renderAssessment() {
-    $("#assessmentSummary").textContent =
+    const summary = $("#assessmentSummary");
+    const panel = $("#assessmentPanel");
+    if (!summary || !panel) return;
+    summary.textContent =
       "The official assessment balance is preserved while the continuous assessment is redirected toward practical legal-geoeconomic judgment.";
 
-    const panel = $("#assessmentPanel");
     const main = el("div", "assessment-card");
     main.appendChild(el("h3", "", data.assessment.strategyMemo.title));
     main.appendChild(el("p", "", `${data.assessment.strategyMemo.weight}%: ${data.assessment.strategyMemo.description}`));
@@ -230,6 +351,7 @@
 
   function renderSources() {
     const list = $("#sourceList");
+    if (!list) return;
     data.sourceIndex.forEach((source) => {
       const item = el("div", "source-item");
       const linkBox = el("div", "");
@@ -248,8 +370,10 @@
 
   function attachEvents() {
     ["#searchInput", "#issueFilter", "#theoryFilter", "#institutionFilter"].forEach((selector) => {
-      $(selector).addEventListener("input", renderWeeks);
-      $(selector).addEventListener("change", renderWeeks);
+      const node = $(selector);
+      if (!node) return;
+      node.addEventListener("input", renderWeeks);
+      node.addEventListener("change", renderWeeks);
     });
   }
 
@@ -258,6 +382,12 @@
   renderProfessorProfile();
   populateFilters();
   renderWeeks();
+  renderFeaturedResources();
+  renderLegislationDocuments();
+  renderWtoDocuments();
+  renderWtoChinaReformDocuments();
+  renderPolicyPaperDocuments();
+  renderMediaDocuments();
   renderTheoryMap();
   renderIssueMap();
   renderAssessment();

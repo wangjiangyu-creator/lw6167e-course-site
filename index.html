@@ -16,12 +16,12 @@
         </span>
       </a>
       <nav class="nav" aria-label="Course sections">
-        <a href="#weeks">Weeks</a>
-        <a href="#theory-map">Theory Map</a>
-        <a href="#issue-map">Issue Map</a>
-        <a href="#assessment">Assessment</a>
-        <a href="#academic-updates">Academic Updates</a>
-        <a href="#sources">Sources</a>
+        <a href="./topics.html">Topics</a>
+        <a href="./rules.html">Rules</a>
+        <a href="./reports.html">Reports</a>
+        <a href="./academic-updates.html">Academic</a>
+        <a href="./media.html">Media</a>
+        <a href="./sources.html">Sources</a>
       </nav>
     </header>
 
@@ -86,96 +86,45 @@
         <div id="professorProfile" class="professor-profile"></div>
       </section>
 
-      <section id="weeks" class="section-inner weeks-section" aria-labelledby="weeks-title">
-        <div class="section-heading">
-          <div>
-            <p class="kicker">Weekly modules</p>
-            <h2 id="weeks-title">Twelve Problems In The International Economic Order</h2>
-          </div>
-          <div class="controls" aria-label="Filter weekly modules">
-            <label>
-              <span>Search</span>
-              <input id="searchInput" type="search" placeholder="sanctions, WTO, RMB, CBAM..." />
-            </label>
-            <label>
-              <span>Issue</span>
-              <select id="issueFilter">
-                <option value="">All issues</option>
-              </select>
-            </label>
-            <label>
-              <span>Theory</span>
-              <select id="theoryFilter">
-                <option value="">All theories</option>
-              </select>
-            </label>
-            <label>
-              <span>Institution</span>
-              <select id="institutionFilter">
-                <option value="">All institutions</option>
-              </select>
-            </label>
-          </div>
-        </div>
-        <div id="weekCount" class="result-count" aria-live="polite"></div>
-        <div id="weeksGrid" class="weeks-grid"></div>
-      </section>
-
-      <section id="theory-map" class="section-band" aria-labelledby="theory-title">
+      <section class="section-band" aria-labelledby="sections-title">
         <div class="section-inner">
           <div class="section-heading compact">
             <div>
-              <p class="kicker">Theory map</p>
-              <h2 id="theory-title">Theories Students Reuse Across Topics</h2>
+              <p class="kicker">Navigate</p>
+              <h2 id="sections-title">Course Research Pages</h2>
+              <p>
+                The detailed records now live on dedicated secondary pages. Use the navigation above to move between
+                topics, rules, reports, academic works, media, and source indexes.
+              </p>
             </div>
           </div>
-          <div id="theoryMap" class="map-grid"></div>
-        </div>
-      </section>
-
-      <section id="issue-map" class="section-inner" aria-labelledby="issue-title">
-        <div class="section-heading compact">
-          <div>
-            <p class="kicker">Issue map</p>
-            <h2 id="issue-title">Core Problems And Where They Appear</h2>
+          <div class="section-link-list" aria-label="Course research pages">
+            <a class="section-link" href="./topics.html">
+              <strong>Topics</strong>
+              <span>The twelve topic modules, filters, and links to individual topic pages.</span>
+            </a>
+            <a class="section-link" href="./rules.html">
+              <strong>Rules</strong>
+              <span>International agreements, treaties, and legislation.</span>
+            </a>
+            <a class="section-link" href="./reports.html">
+              <strong>Reports</strong>
+              <span>Policy papers and reports by organizations and think tanks.</span>
+            </a>
+            <a class="section-link" href="./academic-updates.html">
+              <strong>Academic</strong>
+              <span>Books, chapters, and journal/law review articles.</span>
+            </a>
+            <a class="section-link" href="./media.html">
+              <strong>Media</strong>
+              <span>Media, policy analysis, and current affairs sources.</span>
+            </a>
+            <a class="section-link" href="./sources.html">
+              <strong>Sources</strong>
+              <span>Primary materials and institutional source links.</span>
+            </a>
           </div>
         </div>
-        <div id="issueMap" class="issue-grid"></div>
-      </section>
-
-      <section id="assessment" class="section-band" aria-labelledby="assessment-title">
-        <div class="section-inner assessment-layout">
-          <div>
-            <p class="kicker">Assessment</p>
-            <h2 id="assessment-title">Legal-Geoeconomic Strategy Work</h2>
-            <p id="assessmentSummary"></p>
-          </div>
-          <div id="assessmentPanel" class="assessment-panel"></div>
-        </div>
-      </section>
-
-      <section id="academic-updates" class="section-inner academic-updates-section" aria-labelledby="academic-updates-title">
-        <div>
-          <p class="kicker">Academic Updates</p>
-          <h2 id="academic-updates-title">Recent Scholarship Around The 12 Topics</h2>
-          <p>
-            A secondary database tracks recent books and journal articles from Oxford University Press,
-            Cambridge University Press, Hart, Edward Elgar, Harvard, Princeton, Yale, and other academic
-            publishers, with articles drawn from leading international economic law journals, international
-            law journals, and law reviews, organized by weekly topic.
-          </p>
-        </div>
-        <a class="text-command" href="./academic-updates.html">Open academic updates database</a>
-      </section>
-
-      <section id="sources" class="section-inner" aria-labelledby="sources-title">
-        <div class="section-heading compact">
-          <div>
-            <p class="kicker">Source index</p>
-            <h2 id="sources-title">Primary Materials And Institutional Sources</h2>
-          </div>
-        </div>
-        <div id="sourceList" class="source-list"></div>
       </section>
     </main>
 

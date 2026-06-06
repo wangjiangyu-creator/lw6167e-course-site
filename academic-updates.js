@@ -1,6 +1,7 @@
 (function () {
   const course = window.COURSE_DATA;
   const academic = window.ACADEMIC_UPDATES_DATA;
+  const academicDocuments = window.ACADEMIC_DOCUMENTS || [];
 
   const $ = (selector) => document.querySelector(selector);
   const el = (tag, className, text) => {
@@ -13,6 +14,11 @@
   const normalize = (value) => String(value || "").toLowerCase();
   const unique = (items) => Array.from(new Set(items)).sort((a, b) => a.localeCompare(b));
   const sourceName = (item) => (item.type === "Journal Article" ? item.venue : item.publisher);
+  const formatBytes = (bytes) => {
+    const value = Number(bytes) || 0;
+    if (value >= 1_000_000) return `${(value / 1_000_000).toFixed(1)} MB`;
+    return `${Math.max(1, Math.round(value / 1_000))} KB`;
+  };
 
   function option(value, label) {
     const node = document.createElement("option");
@@ -138,6 +144,31 @@
     });
   }
 
+  function renderAcademicDocuments() {
+    const list = $("#academicDocumentList");
+    if (!list) return;
+    academicDocuments.forEach((documentRecord) => {
+      const item = el("div", "source-item");
+      const linkBox = el("div", "");
+      const link = document.createElement("a");
+      link.href = documentRecord.url;
+      link.target = "_blank";
+      link.rel = "noreferrer";
+      link.textContent = documentRecord.title;
+      linkBox.appendChild(link);
+      item.appendChild(linkBox);
+      item.appendChild(
+        el(
+          "p",
+          "",
+          `${documentRecord.source}; ${documentRecord.year}; ${documentRecord.fileType || "PDF"} (${formatBytes(documentRecord.bytes)})`
+        )
+      );
+      item.appendChild(el("p", "", "Uploaded academic document"));
+      list.appendChild(item);
+    });
+  }
+
   function attachEvents() {
     ["#academicSearch", "#academicTopicFilter", "#academicTypeFilter", "#academicPublisherFilter"].forEach((selector) => {
       $(selector).addEventListener("input", renderUpdates);
@@ -149,5 +180,6 @@
   populateFilters();
   renderTopicSummary();
   renderUpdates();
+  renderAcademicDocuments();
   attachEvents();
 })();
